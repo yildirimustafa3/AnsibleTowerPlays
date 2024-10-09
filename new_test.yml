@@ -1,0 +1,4 @@
+---
+- name: Create Ansible folder
+  hosts: localhost
+  become: true
