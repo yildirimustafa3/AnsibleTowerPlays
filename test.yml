@@ -1,13 +1,1 @@
-- name: Configure systems
-  hosts: localhost
-  become: yes
-
-  tasks:
-
-- name: Call Roles
-  hosts: localhost
-  roles:
-   #- hostname
-   #- firewalld
-   #- ntp-config
-   - motd
+a
