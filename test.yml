@@ -1,7 +1,7 @@
-- name: Example from an Ansible Playbook
+---
+- name: Ping Test
   hosts: localhost
-  ansible.builtin.ping:
-
-- name: Induce an exception to see what happens
-  ansible.builtin.ping:
-    data: crash
+  gather_facts: no
+  tasks:
+    - name: Ping localhost
+      ping:
