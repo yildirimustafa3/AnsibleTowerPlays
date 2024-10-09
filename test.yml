@@ -1,11 +1,11 @@
 - name: Configure systems
-  hosts: servers
+  hosts: localhost
   become: yes
 
   tasks:
 
 - name: Call Roles
-  hosts: servers
+  hosts: localhost
   roles:
    #- hostname
    #- firewalld
