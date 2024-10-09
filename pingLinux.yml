@@ -1,0 +1,7 @@
+---
+- name: Ping Test
+  hosts: 192.168.2.88
+  gather_facts: no
+  tasks:
+    - name: Ping ubuntu
+      ping:
