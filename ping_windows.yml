@@ -1,0 +1,7 @@
+---
+- name: Ping Test on Windows Host
+  hosts: 192.168.2.41
+  gather_facts: no
+  tasks:
+    - name: Test connectivity
+      win_ping:
