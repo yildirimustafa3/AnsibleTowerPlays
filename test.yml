@@ -1,6 +1,6 @@
 ---
 - name: Ping Test
-  hosts: localhost
+  hosts: 192.168.2.41
   gather_facts: no
   tasks:
     - name: Ping localhost
