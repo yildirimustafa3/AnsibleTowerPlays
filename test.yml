@@ -1,4 +1,5 @@
 - name: Example from an Ansible Playbook
+  hosts: localhost
   ansible.builtin.ping:
 
 - name: Induce an exception to see what happens
