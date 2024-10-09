@@ -1,0 +1,8 @@
+---
+- name: Create Ansible folder
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Create ansible directory
+      command: mkdir /MustafaGithub
