@@ -1,6 +1,13 @@
-- name: Example from an Ansible Playbook
-  ansible.builtin.ping:
+- name: Configure systems
+  hosts: servers
+  become: yes
 
-- name: Induce an exception to see what happens
-  ansible.builtin.ping:
-    data: crash
+  tasks:
+
+- name: Call Roles
+  hosts: servers
+  roles:
+   #- hostname
+   #- firewalld
+   #- ntp-config
+   - motd
