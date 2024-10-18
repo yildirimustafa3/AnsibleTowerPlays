@@ -1,7 +1,7 @@
 ---
 - name: Ping Test
-  hosts: 192.168.2.121
-  gather_facts: no
+  hosts: myvcenter01.myhomelab.local
+  gather_facts: yes
   tasks:
-    - name: Ping ubuntu
+    - name: Ping vcenter
       ping:
