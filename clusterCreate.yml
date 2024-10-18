@@ -6,8 +6,8 @@
   tasks:
     - name: Create Cluster
       vmware.vmware.cluster:
-        hostname: 'myvcenter01.myhomelab.local'
-        username: 'root'
-        password: 'VMware1!'
+        hostname: myvcenter01.myhomelab.local
+        username: root
+        password: VMware1!
         datacenter_name: datacenter
         cluster_name: hellocluster
