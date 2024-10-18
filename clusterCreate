@@ -1,4 +1,5 @@
 - name: Create Cluster
+  hosts: myvcenter01.myhomelab.local
   vmware.vmware.cluster:
     hostname: '{{ vcenter_hostname }}'
     username: '{{ vcenter_username }}'
