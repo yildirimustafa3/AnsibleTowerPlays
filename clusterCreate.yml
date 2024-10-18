@@ -8,7 +8,7 @@
 
   tasks:
     - name: Create Cluster
-      community.vmware.vmware.cluster:
+      vmware.vmware.cluster:
         hostname: '{{ vcenter_hostname }}'
         username: '{{ vcenter_username }}'
         password: '{{ vcenter_password }}'
