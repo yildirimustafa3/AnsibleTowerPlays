@@ -1,6 +1,6 @@
 ---
 - name: Ping Test
-  hosts: myvcenter01.myhomelab.local
+  hosts: myvcenter01.myhomelab.local,myesxi03.myhomelab.local 
   gather_facts: yes
   tasks:
     - name: Ping vcenter
