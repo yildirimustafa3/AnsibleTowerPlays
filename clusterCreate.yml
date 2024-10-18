@@ -2,6 +2,9 @@
 - name: Create VMware Cluster
   hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
   gather_facts: yes  # Set to yes if you need to gather facts
+  collections:
+    - community.general
+    - community.vmware
 
   tasks:
     - name: Create Cluster
