@@ -1,0 +1,17 @@
+---
+- name: Disconnect cd from vm
+  collections:
+    - community.vmware
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Disconnect CD/DVD drive
+      community.vmware.vmware_guest_cdrom:
+        validate_certs: no
+        state: "absent"
+        cdrom_number: 1
+      register: result
+ 
+    - name: Show results
+      debug:
+        var: result
