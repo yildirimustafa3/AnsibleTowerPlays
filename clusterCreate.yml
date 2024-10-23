@@ -7,7 +7,7 @@
     - name: Create Cluster
       vmware.vmware.cluster:
         hostname: myvcenter01.myhomelab.local
-        username: root
+        username: administrator@vsphere.local
         password: VMware1!
         datacenter_name: datacenter
         cluster_name: hellocluster
