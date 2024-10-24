@@ -6,7 +6,7 @@
   tasks:
     - name: Create Cluster
       vmware.vmware.cluster:
-        hostname: myvcenter01.myhomelab.local
+        hostname: 192.168.2.121
         username: administrator@vsphere.local
         password: VMware1!
         datacenter_name: datacenter
