@@ -1,4 +1,5 @@
 - name: Gather cluster info from given datacenter
+  hosts: 192.168.2.121
   community.vmware.vmware_cluster_info:
     hostname: '192.168.2.121'
     username: 'administrator@vsphere.local'
