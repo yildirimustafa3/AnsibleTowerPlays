@@ -9,5 +9,6 @@
         hostname: 192.168.2.121
         username: administrator@vsphere.local
         password: VMware1!
+        validate_certs: no
         datacenter_name: datacenter
         cluster_name: hellocluster
