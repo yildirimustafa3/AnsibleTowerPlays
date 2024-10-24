@@ -2,13 +2,13 @@
 - name: Create VMware Cluster
   hosts: 192.168.2.121  # or the appropriate host/group
   gather_facts: no  # Set to yes if you need to gather facts
-
+  validate_certs: no
+  
   tasks:
     - name: Create Cluster
       vmware.vmware.cluster:
         hostname: 192.168.2.121
         username: administrator@vsphere.local
         password: VMware1!
-        validate_certs: no
         datacenter_name: datacenter
         cluster_name: hellocluster
