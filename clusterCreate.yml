@@ -1,7 +1,7 @@
 ---
 - name: Gather cluster info from given datacenter
   hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
-  gather_facts: no  # Set to yes if you need to gather facts
+  gather_facts: yes  # Set to yes if you need to gather facts
 
   tasks:
     - name: CreatingCluster
