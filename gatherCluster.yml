@@ -10,6 +10,6 @@
         username: 'administrator@vsphere.local'
         password: 'VMware1!'
         datacenter: mydatacenter01
+        validate_certs: no
       delegate_to: localhost
       register: cluster_info
-      validate_certs: no
