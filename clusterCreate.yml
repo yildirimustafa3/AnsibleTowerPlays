@@ -1,19 +1,19 @@
 ---
 - name: Test VMware API Connection
-  hosts: localhost
+  hosts: myvcenter01.myhomelab.local
   gather_facts: no
   
   tasks:
     - name: Test vCenter API connection
       vmware.vmware.vmware_rest:
-        hostname: 192.168.2.121
+        hostname: myvcenter01.myhomelab.local
         username: administrator@vsphere.local
         password: VMware1!
         validate_certs: no
 
     - name: Create VMware Cluster
       vmware.vmware.cluster:
-        hostname: 192.168.2.121
+        hostname: myvcenter01.myhomelab.local
         username: administrator@vsphere.local
         password: VMware1!
         datacenter_name: datacenter
