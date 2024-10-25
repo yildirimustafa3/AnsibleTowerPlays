@@ -9,6 +9,7 @@
         hostname: 'myvcenter01.myhomelab.local'
         username: 'administrator@vsphere.local'
         password: 'VMware1!'
-        datacenter: mydatacenter01
+        datacenter_name: mydatacenter01
+        cluster_name: AnsibleClustertest
         validate_certs: no
       delegate_to: localhost
