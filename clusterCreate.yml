@@ -1,21 +1,14 @@
 ---
-- name: Test VMware API Connection
-  hosts: myvcenter01.myhomelab.local
-  gather_facts: no
-  
-  tasks:
-    - name: Test vCenter API connection
-      vmware.vmware.vmware_rest:
-        hostname: myvcenter01.myhomelab.local
-        username: administrator@vsphere.local
-        password: VMware1!
-        validate_certs: no
+- name: Gather cluster info from given datacenter
+  hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
+  gather_facts: no  # Set to yes if you need to gather facts
 
-    - name: Create VMware Cluster
-      vmware.vmware.cluster:
-        hostname: myvcenter01.myhomelab.local
-        username: administrator@vsphere.local
-        password: VMware1!
-        datacenter_name: datacenter
-        cluster_name: hellocluster
+  tasks:
+    - name: CreatingCluster
+      community.vmware.vmware_cluster:
+        hostname: 'myvcenter01.myhomelab.local'
+        username: 'administrator@vsphere.local'
+        password: 'VMware1!'
+        datacenter: mydatacenter01
         validate_certs: no
+      delegate_to: localhost
