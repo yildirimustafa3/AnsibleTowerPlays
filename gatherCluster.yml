@@ -1,12 +1,12 @@
 ---
 - name: Gather cluster info from given datacenter
-  hosts: 192.168.2.121  # or the appropriate host/group
+  hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
   gather_facts: no  # Set to yes if you need to gather facts
 
   tasks:
     - name: GatherBakalim
       community.vmware.vmware_cluster_info:
-        hostname: '192.168.2.121'
+        hostname: 'myvcenter01.myhomelab.local'
         username: 'administrator@vsphere.local'
         password: 'VMware1!'
         datacenter: mydatacenter01
