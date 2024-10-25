@@ -12,3 +12,4 @@
         datacenter: mydatacenter01
       delegate_to: localhost
       register: cluster_info
+      validate_certs: no
