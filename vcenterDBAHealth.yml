@@ -1,0 +1,19 @@
+---
+- name: Create Cluster with vmware.vmware
+  hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
+  gather_facts: no  # Set to yes if you need to gather facts
+
+  tasks:
+    - name: Get the health state of applmgmt
+      vmware.vmware_rest.appliance_health_database_info:
+        vcenter_hostname: 'myvcenter01.myhomelab.local'
+        vcenter_username: '{{ test_username }}'
+        vcenter_password: '{{ test_password }}'
+        vcenter_validate_certs: no
+      delegate_to: localhost
+      register: result
+
+    - name: Display vCenter health
+      debug:
+        var: result
+        
