@@ -1,0 +1,8 @@
+- name: Fetch vCenter license
+  hosts: myvcenter01.myhomelab.local
+  tasks:
+    - name: LicenseInfo
+      vmware.vmware.license_info:
+        hostname: 'myvcenter01.myhomelab.local'
+        username: '{{ test_username }}'
+        password: '{{ test_password }}'
