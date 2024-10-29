@@ -6,9 +6,9 @@
   tasks:
     - name: Get the health state of applmgmt
       vmware.vmware_rest.appliance_health_applmgmt_info:
-        hostname: 'myvcenter01.myhomelab.local'
-        username: '{{ test_username }}'
-        password: '{{ test_password }}'
+        vcenter_hostname: 'myvcenter01.myhomelab.local'
+        vcenter_username: '{{ test_username }}'
+        vcenter_password: '{{ test_password }}'
         validate_certs: no
       delegate_to: localhost
       register: result
