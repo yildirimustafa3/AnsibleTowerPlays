@@ -9,9 +9,9 @@
   tasks:
     - name: Fetch vCenter license
       vmware.vmware.license_info:
-#        hostname: 'myvcenter01.myhomelab.local'
-#        username: '{{ test_username }}'
-#        password: '{{ test_password }}'
+        hostname: 'myvcenter01.myhomelab.local'
+        username: '{{ test_username }}'
+        password: '{{ test_password }}'
         validate_certs: no
       delegate_to: localhost
       register: license_info
