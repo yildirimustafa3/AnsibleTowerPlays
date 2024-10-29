@@ -9,7 +9,7 @@
         vcenter_hostname: 'myvcenter01.myhomelab.local'
         vcenter_username: '{{ test_username }}'
         vcenter_password: '{{ test_password }}'
-        validate_certs: no
+        vcenter_validate_certs: no
       delegate_to: localhost
       register: result
 
