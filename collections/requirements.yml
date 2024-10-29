@@ -3,3 +3,4 @@ collections:
   - name: community.general  
   - name: community.vmware
   - name: vmware.vmware
+  - name: vmware.vmware_rest
