@@ -29,3 +29,16 @@
     - name: Display vCenter DBA health
       debug:
         var: result_DBA
+
+    - name: Get the database storage heath status
+      vmware.vmware_rest.appliance_health_databasestorage_info:
+        vcenter_hostname: 'myvcenter01.myhomelab.local'
+        vcenter_username: '{{ test_username }}'
+        vcenter_password: '{{ test_password }}'
+        vcenter_validate_certs: no
+      delegate_to: localhost
+      register: result_DBA_storage
+
+    - name: Display vCenter DBA storage health
+      debug:
+        var: result_DBA_storage
