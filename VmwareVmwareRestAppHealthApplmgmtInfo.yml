@@ -44,3 +44,15 @@
       debug:
         var: result_MEM
         
+    - name: Get the health state of STORAGE
+      vmware.vmware_rest.appliance_health_storage_info:
+        vcenter_hostname: 'myvcenter01.myhomelab.local'
+        vcenter_username: '{{ test_username }}'
+        vcenter_password: '{{ test_password }}'
+        vcenter_validate_certs: no
+      delegate_to: localhost
+      register: result_STORAGE
+
+    - name: Display vCenter MEMORY health
+      debug:
+        var: result_STORAGE
