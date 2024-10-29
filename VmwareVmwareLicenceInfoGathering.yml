@@ -11,3 +11,8 @@
         password: '{{ test_password }}'
         validate_certs: no
       delegate_to: localhost
+      register: license_info
+
+    -  name: Display vCenter Licence Info
+       debug:
+         var: license_info
