@@ -2,13 +2,16 @@
 - name: Create Cluster with vmware.vmware
   hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
   gather_facts: no  # Set to yes if you need to gather facts
-
+  vars: 
+    hostname: 'myvcenter01.myhomelab.local'
+    username: '{{ test_username }}'
+    password: '{{ test_password }}'
   tasks:
     - name: Fetch vCenter license
       vmware.vmware.license_info:
-        hostname: 'myvcenter01.myhomelab.local'
-        username: '{{ test_username }}'
-        password: '{{ test_password }}'
+#        hostname: 'myvcenter01.myhomelab.local'
+#        username: '{{ test_username }}'
+#        password: '{{ test_password }}'
         validate_certs: no
       delegate_to: localhost
       register: license_info
