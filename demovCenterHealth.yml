@@ -14,4 +14,4 @@
         password: '{{ test_password }}'
         properties: 'summary'
         validate_certs: no
-      delegate_to: localhost
+      #delegate_to: localhost
