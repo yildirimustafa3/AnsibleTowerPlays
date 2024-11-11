@@ -1,0 +1,29 @@
+---
+- name: Create Cluster with vmware.vmware
+  hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
+  gather_facts: no  # Set to yes if you need to gather facts
+
+  tasks:
+    - name: Create Cluster with vmware.vmware
+      vmware.vmware.cluster:
+        hostname: 'myvcenter01.myhomelab.local'
+        username: '{{ test_username }}'
+        password: '{{ test_password }}'
+        datacenter_name: mydatacenter01
+        cluster_name: AnsibleTestCluster01
+        validate_certs: no
+      delegate_to: localhost
+
+
+    - name: Enable DRS and distribute a more even number of virtual machines across hosts for availability
+      vmware.vmware.cluster_drs:
+       hostname: '{{ vcenter_hostname }}'
+       username: '{{ vcenter_username }}'
+       password: '{{ vcenter_password }}'
+       datacenter_name: datacenter
+       cluster_name: AnsibleTestCluster01
+       enable: true
+       advanced_settings:
+         'TryBalanceVmsPerHost': '1'
+       validate_certs: no
+     delegate_to: localhost
