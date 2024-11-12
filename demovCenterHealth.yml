@@ -2,8 +2,8 @@
 
 - name: Gather all appliance info  with vmware.vmware.appliance_info
   hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
-  vars:
-    ansible_python_interpreter: /usr/bin/python3  # or the correct path to your Python 3.x interpreter
+  #vars:
+  #  ansible_python_interpreter: /usr/bin/python3  # or the correct path to your Python 3.x interpreter
   gather_facts: no  # Set to yes if you need to gather facts
 
   tasks:
