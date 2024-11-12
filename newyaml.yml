@@ -1,0 +1,15 @@
+---
+
+- name: Gather all appliance info  with vmware.vmware.appliance_info
+  hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
+  gather_facts: no  # Set to yes if you need to gather facts
+
+  tasks:
+    - name: Gather all appliance info  with vmware.vmware.appliance_info
+      vmware.vmware.appliance_info:
+        hostname: 'myvcenter01.myhomelab.local'
+        username: '{{ test_username }}'
+        password: '{{ test_password }}'
+        properties: 'summary'
+        validate_certs: no
+      delegate_to: localhost
