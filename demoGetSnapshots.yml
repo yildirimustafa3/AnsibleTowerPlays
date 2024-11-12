@@ -1,1 +1,17 @@
+---
 
+- name: get Snapshot
+  hosts: myvcenter01.myhomelab.local  # or the appropriate host/group
+  vars:
+    ansible_python_interpreter: /usr/bin/python3  # or the correct path to your Python 3.x interpreter
+  gather_facts: no  # Set to yes if you need to gather facts
+
+  tasks:
+    - name: get Snapshot
+      vmware_snapshot_info_all:
+        hostname: 'myvcenter01.myhomelab.local'
+        username: '{{ test_username }}'
+        password: '{{ test_password }}'
+        properties: 'summary'
+        validate_certs: no
+      delegate_to: localhost
