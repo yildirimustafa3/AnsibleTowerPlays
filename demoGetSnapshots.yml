@@ -8,7 +8,7 @@
 
   tasks:
     - name: get Snapshot
-      vmware_snapshot_info_all:
+      community.vmware.vmware_all_snapshots_info:
         hostname: 'myvcenter01.myhomelab.local'
         username: '{{ test_username }}'
         password: '{{ test_password }}'
