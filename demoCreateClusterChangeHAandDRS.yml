@@ -10,7 +10,7 @@
         username: '{{ test_username }}'
         password: '{{ test_password }}'
         datacenter_name: mydatacenter01
-        cluster_name: AnsibleTestCluster01
+        cluster_name: Juniper-Mars
         validate_certs: no
       delegate_to: localhost
 
@@ -20,7 +20,7 @@
         username: '{{ test_username }}'
         password: '{{ test_password }}'
         datacenter_name: mydatacenter01
-        cluster_name: AnsibleTestCluster01
+        cluster_name: Juniper-Mars
         validate_certs: no
         enable: true
         advanced_settings:
