@@ -13,6 +13,5 @@
         username: '{{ test_username }}'
         password: '{{ test_password }}'
         datacenter: mydatacenter01
-        properties: 'summary'
         validate_certs: no
       delegate_to: localhost
